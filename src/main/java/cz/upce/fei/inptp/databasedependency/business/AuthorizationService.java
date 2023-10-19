@@ -15,6 +15,12 @@ public class AuthorizationService {
     private PersonDAO persondao;
     private PersonRolesDAO personRolesDao;
 
+    public AuthorizationService(PersonDAO persondao, PersonRolesDAO personRolesDao) {
+        this.persondao = persondao;
+        this.personRolesDao = personRolesDao;
+
+    }
+
     public AuthorizationService() {
         this.persondao = new PersonDAO();
         this.personRolesDao = new PersonRolesDAO();

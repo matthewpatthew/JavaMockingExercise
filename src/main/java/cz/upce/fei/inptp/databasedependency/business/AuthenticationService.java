@@ -21,6 +21,10 @@ public class AuthenticationService {
         this.persondao = new PersonDAO();
     }
 
+    public AuthenticationService(PersonDAO persondao) {
+        this.persondao = persondao;
+    }
+
     // TODO: add tests
     // TODO: Authenticate("user", "pass") - Person("user", encryptPwd("pass")) - pass
     // TODO: Authenticate("user", "invalid") - Person("user", encryptPwd("pass")) - fail
